@@ -1,3 +1,1 @@
 # MernStack
-# MernStack
-# MERN
