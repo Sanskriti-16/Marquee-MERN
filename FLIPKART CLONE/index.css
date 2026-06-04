@@ -559,7 +559,6 @@ header {
   margin: 10px;
   border-radius: var(--brand-border-radius);
 }
-
 #spotlight-items-container {
   display: flex;
   justify-content: start;
@@ -577,4 +576,16 @@ header {
 
 .spotlight-items img {
   width: 100%;
+}
+
+/--Footer--/
+
+footer{
+  width: 100vw;
+  background-color: rgb(39, 38, 38);
+  color: beige;
+  height: 200px;
+  display: flex;
+  
+  
 }
