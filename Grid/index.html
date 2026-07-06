@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2x2 Reviews Grid</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dbcfcf;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .review-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-heading {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .review-text {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <h3 class="review-heading">Review 1</h3>
+            <p class="review-text">"Amazing product! Highly recommend it to everyone!"</p>
+            <p class="reivew-person">Alex</p>
+        </div>
+        <div class="review-card">
+            <h3 class="review-heading">Review 2</h3>
+            <p class="review-text">"Great value for the price. Delivered quickly."</p>
+            <p class="reivew-person">Jamie</p>
+        </div>
+        <div class="review-card">
+            <h3 class="review-heading">Review 3</h3>
+            <p class="review-text">"Works as advertised. Would buy again."</p>
+            <p class="reivew-person">Taylor</p>
+        </div>
+        <div class="review-card">
+            <h3 class="review-heading">Review 4</h3>
+            <p class="review-text">"Not what I expected, but decent quality."</p>
+            <p class="reivew-person">Morgan</p>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f0f0f0;
+}
+
+/* Traffic Light Box */
+.traffic-box{
+    width:150px;
+    padding:20px;
+    background:#222;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Common Circle Style */
+.light{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    margin:15px auto;
+    transition:all 0.5s ease;
+}
+
+/* Red Light */
+.red{
+    background:red;
+    animation:redLight 6s infinite;
+}
+
+/* Yellow Light */
+.yellow{
+    background:gold;
+    animation:yellowLight 6s infinite;
+}
+
+/* Green Light */
+.green{
+    background:green;
+    animation:greenLight 6s infinite;
+}
+
+/* Animations */
+
+@keyframes redLight{
+    0%,30%{
+        opacity:1;
+        box-shadow:0 0 30px red,
+                   0 0 60px red;
+    }
+    31%,100%{
+        opacity:0.3;
+        box-shadow:none;
+    }
+}
+
+@keyframes yellowLight{
+    0%,30%{
+        opacity:0.3;
+        box-shadow:none;
+    }
+    31%,60%{
+        opacity:1;
+        box-shadow:0 0 30px yellow,
+                   0 0 60px yellow;
+    }
+    61%,100%{
+        opacity:0.3;
+        box-shadow:none;
+    }
+}
+
+@keyframes greenLight{
+    0%,60%{
+        opacity:0.3;
+        box-shadow:none;
+    }
+    61%,100%{
+        opacity:1;
+        box-shadow:0 0 30px lime,
+                   0 0 60px lime;
+    }
+}

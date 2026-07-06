@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* Transition */
+            transition-property: all;
+            transition-duration: 1s;
+            transition-delay: 0s;
+            border: 1px solid yellow;
+        }
+        #box:hover {
+            background-color: black;
+            width: 150px;
+            border: 5px solid rgb(87, 28, 87);
+
+        }
+        button{
+            color:rgb(68, 68, 63);
+            background-color:rgb(208, 202, 202);
+            outline: none;
+            border: none;
+            border-radius: 20px;
+
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+        }
+        button:hover {
+            background-color: rgb(105, 92, 92);
+            color:black;
+            scale: 1.1;
+        }
+    </style>
+</head>
+<body>
+    <button id="box"></button>
+    <button type="">Click</button>
+</body>
+</html>

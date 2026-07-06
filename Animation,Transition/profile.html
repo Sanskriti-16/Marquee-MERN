@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+</head>
+<body>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+
+    background:linear-gradient(135deg,#7429d8,#b44cff);
+}
+
+.container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+
+    width:320px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:80px 25px 30px;
+
+    position:relative;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.3);
+
+}
+
+.profile{
+
+    position:absolute;
+
+    left:50%;
+    top:-60px;
+
+    transform:translateX(-50%);
+}
+
+.profile img{
+
+    width:160px;
+    height:160px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+/* ==========================
+      ONLINE STATUS
+=========================== */
+
+.status{
+
+    position:absolute;
+
+    right:8px;
+    top:8px;
+
+    width:22px;
+    height:22px;
+
+    background:#00ff55;
+
+    border-radius:50%;
+
+    border:3px solid white;
+
+    animation:blink 1.3s infinite;
+}
+
+.status::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    background:#00ff55;
+
+    animation:ripple 1.3s infinite;
+}
+
+/* Blink Effect */
+
+@keyframes blink{
+
+    0%{
+        background:#006400;
+        box-shadow:0 0 5px #006400;
+    }
+
+    50%{
+
+        background:#53ff53;
+
+        box-shadow:
+        0 0 10px #53ff53,
+        0 0 20px #53ff53,
+        0 0 35px #53ff53;
+
+    }
+
+    100%{
+
+        background:#006400;
+        box-shadow:0 0 5px #006400;
+
+    }
+
+}
+
+/* Ripple */
+
+@keyframes ripple{
+
+    0%{
+
+        transform:translate(-50%,-50%) scale(1);
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:translate(-50%,-50%) scale(2.2);
+
+        opacity:0;
+
+    }
+
+}
+
+h2{
+
+    margin-top:40px;
+
+    font-size:28px;
+
+    color:#333;
+
+}
+
+.profession{
+
+    color:gray;
+
+    margin-top:8px;
+
+    margin-bottom:25px;
+
+}
+
+.details{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    margin-bottom:30px;
+
+}
+
+.details h3{
+
+    color:#333;
+
+}
+
+.details span{
+
+    color:gray;
+
+    font-size:14px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+button{
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.follow{
+
+    background:#6a1bff;
+
+    color:white;
+
+}
+
+.follow:hover{
+
+    background:#4d00e6;
+
+    transform:translateY(-3px);
+
+}
+
+.message{
+
+    background:#cfcfcf;
+
+}
+
+.message:hover{
+
+    background:#a9a9a9;
+
+    transform:translateY(-3px);
+
+}
+    </style>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="profile">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIeVSzghkEVwsCj4jpdkfZQBZ8nyUPGdls5w&s" alt="Profile">
+
+            <!-- Online Status -->
+            <div class="status"></div>
+
+        </div>
+
+        <h2>Saumya</h2>
+
+        <p class="profession">Video Developer</p>
+
+        <div class="details">
+
+            <div>
+                <h3>100</h3>
+                <span>Posts</span>
+            </div>
+
+            <div>
+                <h3>940K</h3>
+                <span>Followers</span>
+            </div>
+
+            <div>
+                <h3>185</h3>
+                <span>Following</span>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="follow">Follow</button>
+            <button class="message">Message</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
