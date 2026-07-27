@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulb ON OFF Project</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#222;
+}
+
+.container{
+    text-align:center;
+}
+
+h1{
+    color:white;
+    margin-bottom:20px;
+}
+
+#bulb{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:#555;
+    border:5px solid #999;
+    margin:20px auto;
+    transition:0.4s;
+}
+
+.on{
+    background:#ffeb3b;
+    box-shadow:
+        0 0 15px #ffeb3b,
+        0 0 30px #ffeb3b,
+        0 0 45px rgba(255,235,59,0.6);
+}
+
+button{
+    padding:10px 20px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#onBtn{
+    background:green;
+    color:white;
+}
+
+#offBtn{
+    background:red;
+    color:white;
+}
+
+button:hover{
+    opacity:0.9;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💡Bulb ON/OFF Project</h1>
+
+    <div id="bulb"></div>
+
+    <button id="onBtn">ON</button>
+    <button id="offBtn">OFF</button>
+</div>
+
+<script>
+const bulb = document.getElementById("bulb");
+const onBtn = document.getElementById("onBtn");
+const offBtn = document.getElementById("offBtn");
+
+onBtn.addEventListener("click", function () {
+    bulb.classList.add("on");
+});
+offBtn.addEventListener("click", function () {
+    bulb.classList.remove("on");
+});
+</script>
+
+</body>
+</html>
